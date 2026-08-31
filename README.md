@@ -4,10 +4,10 @@ Official Account Deletion Guidelines and User Data Management repository for the
 
 ---
 
-## 🌐 Live URLs (Google Play Console)
+## 🌐 Official URLs (Google Play Console)
 
-* **Production URL:** [https://aplibhaji.com/delete-account](https://aplibhaji.com/delete-account)
-* **GitHub Pages Fallback:** [https://ojasthamke.github.io/OrderKart-delete-account/](https://ojasthamke.github.io/OrderKart-delete-account/)
+* **Account Deletion URL:** [https://ojasthamke.github.io/OrderKart-delete-account/](https://ojasthamke.github.io/OrderKart-delete-account/)
+* **Privacy Policy URL:** [https://ojasthamke.github.io/OrderKart-privacy-policy/](https://ojasthamke.github.io/OrderKart-privacy-policy/)
 * **Master App Codebase:** [https://github.com/ojasthamke/OrderKart-main.git](https://github.com/ojasthamke/OrderKart-main.git)
 
 ---
@@ -29,7 +29,7 @@ Official Account Deletion Guidelines and User Data Management repository for the
 ## 🚀 GitHub Pages Deployment Steps
 
 1. Open this repository: `https://github.com/ojasthamke/OrderKart-delete-account`.
-2. Go to **Settings** &gt; **Pages** (in the left sidebar).
+2. Go to **Settings** > **Pages** (in the left sidebar).
 3. Under **Build and deployment**:
    * **Source**: `Deploy from a branch`
    * **Branch**: `main` / `root`
