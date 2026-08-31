@@ -4,10 +4,11 @@ Official Account Deletion Guidelines and User Data Management repository for the
 
 ---
 
-## 🌐 Live Account Deletion URL (Google Play Console)
+## 🌐 Live URLs (Google Play Console)
 
 * **Production URL:** [https://aplibhaji.com/delete-account](https://aplibhaji.com/delete-account)
 * **GitHub Pages Fallback:** [https://ojasthamke.github.io/OrderKart-delete-account/](https://ojasthamke.github.io/OrderKart-delete-account/)
+* **Master App Codebase:** [https://github.com/ojasthamke/OrderKart-main.git](https://github.com/ojasthamke/OrderKart-main.git)
 
 ---
 
@@ -33,14 +34,14 @@ Official Account Deletion Guidelines and User Data Management repository for the
    * **Source**: `Deploy from a branch`
    * **Branch**: `main` / `root`
 4. Click **Save**.
-5. Your Account Deletion portal will be live instantly!
 
 ---
 
 ## 📞 Support & Compliance Contacts
 
 * **App Name:** OrderKart
-* **Legal Entity:** OrderKart Fresh Foods & Essentials (ApliBhaji)
+* **Legal Entity:** OrderKart Fresh Foods & Essentials
 * **Email:** supportorderkart@gmail.com
 * **WhatsApp / Phone:** +91 90211 07009
 * **Address:** Market Yard / Karve Road, Pune, Maharashtra 411038, India
+* **Master Repository:** https://github.com/ojasthamke/OrderKart-main
