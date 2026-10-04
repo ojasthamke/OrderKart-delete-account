@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Your OrderKart Account - OrderKart</title>
-    <meta name="description" content="Official Account Deletion Guidelines for OrderKart customers. Learn how to delete your online account inside the app or request remote data deletion.">
-    <link rel="canonical" href="https://ojasthamke.github.io/OrderKart-delete-account/">
+    <title>Account & Data Deletion - OrderKart</title>
+    <meta name="description" content="Official self-service guide and deletion portal for OrderKart (com.orderkart.app) compliant with Google Play Data Safety requirements.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <style>
         :root {
             --primary: #1B3624;
             --emerald: #10B981;
             --emerald-dark: #047857;
-            --emerald-light: #ECFDF5;
             --danger: #DC2626;
-            --danger-light: #FEF2F2;
-            --bg-page: #F7F5EE;
+            --bg-page: #F8FAF7;
             --bg-card: #FFFFFF;
             --text-main: #1E293B;
             --text-muted: #64748B;
@@ -22,423 +20,202 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background-color: var(--bg-page);
             color: var(--text-main);
-            line-height: 1.65;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            line-height: 1.6;
+            padding: 24px 16px;
         }
-        header {
-            background-color: var(--primary);
-            color: #FFFFFF;
-            padding: 18px 24px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .header-inner {
-            max-width: 900px;
+        .container {
+            max-width: 780px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: #FFFFFF;
-        }
-        .brand-logo {
-            width: 36px;
-            height: 36px;
-            background: var(--emerald);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            font-weight: 900;
-            color: #FFFFFF;
-        }
-        .brand-text h1 {
-            font-size: 18px;
-            font-weight: 800;
-            line-height: 1.2;
-        }
-        nav {
-            display: flex;
-            gap: 16px;
-        }
-        nav a {
-            color: #E2E8F0;
-            text-decoration: none;
-            font-size: 13.5px;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        nav a:hover, nav a.active {
-            color: #FFFFFF;
-            text-decoration: underline;
-        }
-        main {
-            flex: 1;
-            max-width: 850px;
-            margin: 32px auto;
-            padding: 0 20px;
-            width: 100%;
-        }
-        .policy-card {
             background: var(--bg-card);
-            border-radius: 18px;
-            padding: 40px 32px;
+            padding: 44px 36px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             border: 1px solid var(--border);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
-        .page-header {
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: var(--emerald-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .header {
             border-bottom: 2px solid var(--border);
-            padding-bottom: 24px;
-            margin-bottom: 30px;
+            padding-bottom: 20px;
+            margin-bottom: 28px;
         }
-        .page-badge {
-            display: inline-block;
-            background: var(--danger-light);
-            color: var(--danger);
-            font-size: 12px;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-        .page-title {
-            font-size: 28px;
+        .logo-title {
+            font-size: 26px;
             font-weight: 800;
             color: var(--primary);
-            letter-spacing: -0.5px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
-        .meta-strip {
-            background: #F8FAFC;
-            padding: 12px 16px;
-            border-radius: 8px;
-            margin-top: 14px;
+        .sub-title {
             font-size: 13px;
-            color: var(--text-muted);
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 10px;
-            border: 1px solid #EEF2F6;
+            color: var(--emerald-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         .notice-danger {
             background: #FEF2F2;
             border-left: 4px solid var(--danger);
-            padding: 16px 20px;
-            border-radius: 8px;
-            margin: 24px 0;
-            font-size: 14.5px;
+            padding: 16px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 14px;
             color: #991B1B;
         }
         .notice-info {
             background: #F0FDF4;
             border-left: 4px solid var(--emerald);
-            padding: 16px 20px;
-            border-radius: 8px;
-            margin: 24px 0;
-            font-size: 14.5px;
+            padding: 16px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 14px;
             color: #166534;
         }
         h2 {
-            font-size: 20px;
+            font-size: 18px;
             color: var(--primary);
-            margin-top: 32px;
+            margin-top: 24px;
             margin-bottom: 12px;
             font-weight: 700;
-            border-bottom: 1px solid #F1F5F9;
-            padding-bottom: 6px;
         }
-        p {
-            margin-bottom: 14px;
-            font-size: 15px;
-            color: #334155;
-        }
-        ol, ul {
-            margin-left: 22px;
-            margin-bottom: 18px;
-        }
-        li {
-            margin-bottom: 10px;
-            font-size: 14.5px;
-            color: #475569;
-        }
-        li strong {
-            color: var(--text-main);
-        }
-        .step-box {
+        p { margin-bottom: 14px; font-size: 14.5px; color: #334155; }
+        ul, ol { margin-left: 20px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; font-size: 14px; color: #475569; }
+        .form-card {
             background: #F8FAFC;
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .step-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            margin-bottom: 14px;
-        }
-        .step-item:last-child {
-            margin-bottom: 0;
-        }
-        .step-number {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 13px;
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-        .step-text {
-            font-size: 14.5px;
-            color: #334155;
-            padding-top: 2px;
-        }
-        .cant-access-box {
-            background: #FFFBEB;
-            border: 1px solid #FDE68A;
-            border-radius: 14px;
             padding: 24px;
-            margin-top: 28px;
+            border-radius: 12px;
+            margin-top: 24px;
         }
-        .cant-access-box h3 {
-            font-size: 18px;
-            color: #92400E;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        .form-group {
+            margin-bottom: 16px;
         }
-        .cant-access-box p {
-            color: #78350F;
-            font-size: 14.5px;
+        label {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 6px;
         }
-        .cant-access-box ul {
-            margin-top: 10px;
-            margin-bottom: 14px;
+        input, textarea, select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #CBD5E1;
+            border-radius: 8px;
+            font-size: 14px;
+            color: var(--text-main);
+            background: #FFFFFF;
         }
-        .cant-access-box li {
-            color: #78350F;
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--emerald);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
         }
-        .warning-pill {
-            display: inline-block;
-            background: #FEE2E2;
-            color: #991B1B;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 12.5px;
-            font-weight: 700;
-            margin-top: 6px;
-        }
-        .btn-action {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--danger);
+        .btn-submit {
+            background-color: var(--danger);
             color: #FFFFFF;
-            text-decoration: none;
             padding: 12px 24px;
+            border: none;
             border-radius: 8px;
             font-weight: 700;
             font-size: 14px;
-            margin-top: 10px;
+            cursor: pointer;
             transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
-        .btn-action:hover {
-            background: #B91C1C;
-            text-decoration: none;
+        .btn-submit:hover {
+            background-color: #B91C1C;
         }
-        a {
-            color: var(--emerald-dark);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background: #FFFFFF;
-            border-top: 1px solid var(--border);
-            padding: 32px 20px;
+        .footer {
             margin-top: 40px;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
             font-size: 13px;
             color: var(--text-muted);
             text-align: center;
         }
-        .footer-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            align-items: center;
-        }
-        .footer-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .footer-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .footer-links a:hover {
-            color: var(--emerald-dark);
-        }
-        @media (max-width: 600px) {
-            header { padding: 14px 16px; }
-            .policy-card { padding: 24px 18px; }
-            .page-title { font-size: 24px; }
-            main { margin: 20px auto; }
-            nav { display: none; }
-        }
+        a { color: var(--emerald-dark); text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-inner">
-            <a href="https://ojasthamke.github.io/OrderKart-privacy-policy/" class="brand">
-                <div class="brand-logo">OK</div>
-                <div class="brand-text">
-                    <h1>OrderKart</h1>
-                </div>
-            </a>
-            <nav>
-                <a href="https://ojasthamke.github.io/OrderKart-privacy-policy/">Home</a>
-                <a href="https://ojasthamke.github.io/OrderKart-privacy-policy/">Privacy Policy</a>
-                <a href="./" class="active">Delete Account</a>
-                <a href="https://github.com/ojasthamke/OrderKart-main" target="_blank" rel="noopener">GitHub</a>
-                <a href="mailto:supportorderkart@gmail.com">Support</a>
-            </nav>
+    <div class="container">
+        <a href="index.html" class="nav-back">← Back to OrderKart Home</a>
+        
+        <div class="header">
+            <div class="sub-title">OrderKart • User Data Privacy & Safety</div>
+            <div class="logo-title">Account & Data Deletion</div>
         </div>
-    </header>
 
-    <main>
-        <div class="policy-card">
-            <div class="page-header">
-                <div class="page-badge">External Account Deletion Request Portal</div>
-                <h1 class="page-title">Delete Your OrderKart Account</h1>
-                <div class="meta-strip">
-                    <span><strong>Portal Type:</strong> External Account Deletion Request</span>
-                    <span><strong>Turnaround:</strong> 24–48 Hours</span>
-                    <span><strong>Last Updated:</strong> 31 August 2026</span>
+        <div class="notice-danger">
+            <strong>Warning:</strong> Deleting your account is permanent. All saved customer profiles, delivery addresses, order history, and active sessions will be permanently purged from our databases.
+        </div>
+
+        <h2>Option 1: Instant In-App Deletion (Recommended)</h2>
+        <p>You can instantly delete your account and all associated personal data from your Android device with zero waiting time:</p>
+        <ol>
+            <li>Open the <strong>OrderKart</strong> app on your Android smartphone.</li>
+            <li>Tap on the <strong>Profile</strong> tab in the bottom navigation bar.</li>
+            <li>Scroll to the <strong>Account Actions</strong> section.</li>
+            <li>Tap <strong>Delete Account & Data</strong> and confirm the prompt.</li>
+            <li>Your account will be instantly erased and you will be returned to the sign-in screen.</li>
+        </ol>
+
+        <h2>Option 2: Online Deletion Request Form</h2>
+        <p>If you no longer have access to the app, you can submit a deletion request using the form below. Our support team will process your request within 48 hours.</p>
+
+        <div class="form-card">
+            <form action="mailto:support@orderkart.app?subject=Account%20Deletion%20Request" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="Name" placeholder="Your registered full name" required>
                 </div>
-            </div>
 
-            <div class="notice-danger">
-                <strong>Important Notice:</strong> This web page serves as the official External Account Deletion Request Portal. Deletion requests submitted remotely via email are manually verified against registered store records and processed within 24 to 48 hours. For instant automated deletion, please use the in-app deletion button inside the OrderKart mobile application.
-            </div>
-
-            <h2>Method 1: In-App Instant Deletion (Recommended)</h2>
-            <p>If you currently have the OrderKart mobile application installed on your Android smartphone, you can delete your account directly inside the app in seconds:</p>
-
-            <div class="step-box">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <div class="step-text">Open the <strong>OrderKart</strong> app on your device.</div>
+                <div class="form-group">
+                    <label for="phone">Registered Mobile Number</label>
+                    <input type="tel" id="phone" name="Phone" placeholder="e.g. 9876543210" required>
                 </div>
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <div class="step-text">Tap on the <strong>My Profile</strong> tab in the bottom navigation bar.</div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <div class="step-text">Scroll down to the <strong>Information & Support</strong> section.</div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">4</div>
-                    <div class="step-text">Tap <strong>Delete Account</strong> (highlighted in red).</div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">5</div>
-                    <div class="step-text">Review the on-screen confirmation details regarding cloud credential purge and store ledger preservation.</div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">6</div>
-                    <div class="step-text">Tap <strong>Yes, Delete Account</strong>. Your credentials are permanently removed from the cloud database, local cache is wiped, and you are returned to the login screen.</div>
-                </div>
-            </div>
 
-            <h2>Method 2: Remote Deletion Request</h2>
-            <p>If you have uninstalled the application, lost access to your smartphone, or prefer to request deletion remotely, you can submit an account deletion request via email or WhatsApp.</p>
-
-            <div class="cant-access-box">
-                <h3>⚠️ Can't access the app?</h3>
-                <p>Send an account deletion request to our compliance team at <strong><a href="mailto:supportorderkart@gmail.com?subject=OrderKart%20Account%20Deletion%20Request">supportorderkart@gmail.com</a></strong> or via WhatsApp at <strong><a href="https://wa.me/919021107009">+91 90211 07009</a></strong>.</p>
-                <p style="margin-top: 10px;">Please include the following information in your request:</p>
-                <ul>
-                    <li><strong>Full Name</strong> (as registered on your OrderKart account)</li>
-                    <li><strong>Registered 10-digit Mobile Phone Number</strong></li>
-                    <li><strong>Customer Member Code</strong> (e.g. MEM101, if known)</li>
-                </ul>
-                <div class="warning-pill">🔒 Security Notice: NEVER send your account password or PIN by email.</div>
-                <div style="margin-top: 16px;">
-                    <a href="mailto:supportorderkart@gmail.com?subject=OrderKart%20Account%20Deletion%20Request&body=Dear%20OrderKart%20Support%2C%0A%0AI%20request%20the%20permanent%20deletion%20of%20my%20OrderKart%20online%20account.%0A%0ACustomer%20Details%3A%0A-%20Full%20Name%3A%20%0A-%20Registered%20Mobile%3A%20%0A-%20Member%20Code%20(Optional)%3A%20%0A%0AThank%20you." class="btn-action">
-                        ✉️ Send Deletion Request Email
-                    </a>
+                <div class="form-group">
+                    <label for="email">Google / Registered Email Address (Optional)</label>
+                    <input type="email" id="email" name="Email" placeholder="e.g. yourname@gmail.com">
                 </div>
-            </div>
 
-            <h2>Transparency: What Data is Deleted vs Retained</h2>
+                <div class="form-group">
+                    <label for="reason">Reason for Deletion (Optional)</label>
+                    <textarea id="reason" name="Reason" rows="3" placeholder="Tell us why you are deleting your account..."></textarea>
+                </div>
 
-            <div class="notice-info">
-                <strong>Data That is Permanently Purged:</strong>
-                <ul style="margin-top: 8px; margin-bottom: 0;">
-                    <li>Cloud authentication credentials, password hashes, and security PINs.</li>
-                    <li>Firebase Cloud Messaging (FCM) device push notification tokens.</li>
-                    <li>Active authentication session tokens and cached local customer profile data.</li>
-                </ul>
-            </div>
+                <button type="submit" class="btn-submit">
+                    🗑️ Submit Account Deletion Request
+                </button>
+            </form>
+        </div>
 
-            <p><strong>Data That May Be Retained & Statutory Basis:</strong></p>
-            <p>Under applicable Indian laws and regulatory standards, certain commercial records cannot be immediately erased upon account deletion:</p>
+        <h2>Data Types Deleted vs Retained</h2>
+        <div class="notice-info">
             <ul>
-                <li><strong>Taxation & Accounting Records:</strong> In compliance with the Indian Income Tax Act 1961 and Goods and Services Tax (GST) Act 2017, completed sales receipts, invoices, and physical merchant ledger balances are retained in the shop's local point-of-sale system for statutory audit periods.</li>
-                <li><strong>Fraud Prevention & Dispute Resolution:</strong> Essential transaction histories may be retained to resolve pending financial disputes or prevent repeat fraudulent order placement.</li>
+                <li><strong>Permanently Deleted:</strong> Customer name, phone number, Google account identifier, email address, physical addresses, push notification tokens, and local cache.</li>
+                <li><strong>Retained (Anonymized):</strong> Transactional invoice records required under Indian taxation and accounting laws are retained in strictly anonymized format.</li>
             </ul>
-
-            <h2>Processing Timeline</h2>
-            <p>In-app account deletions take effect <strong>immediately</strong>. Remote web and email deletion requests are verified and processed within <strong>24 to 48 hours</strong> of receipt.</p>
-
-            <div style="margin-top: 32px; border-top: 1px solid var(--border); padding-top: 20px;">
-                <p>Have additional questions? Read our full <a href="https://ojasthamke.github.io/OrderKart-privacy-policy/">Privacy Policy</a> or contact us at <a href="mailto:supportorderkart@gmail.com">supportorderkart@gmail.com</a>.</p>
-            </div>
         </div>
-    </main>
 
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-links">
-                <a href="https://ojasthamke.github.io/OrderKart-privacy-policy/">Home</a>
-                <a href="https://ojasthamke.github.io/OrderKart-privacy-policy/">Privacy Policy</a>
-                <a href="./">Delete Account</a>
-                <a href="https://github.com/ojasthamke/OrderKart-main" target="_blank" rel="noopener">GitHub (OrderKart-main)</a>
-                <a href="mailto:supportorderkart@gmail.com">Contact Support</a>
-            </div>
-            <p>&copy; 2026 OrderKart • OrderKart Fresh Foods & Essentials. All rights reserved.</p>
-            <p style="font-size: 12px; color: #94A3B8;">Published in compliance with Google Play User Data Policy requirements.</p>
+        <div class="footer">
+            &copy; 2026 OrderKart / ApliBhaji Fresh Foods. All rights reserved. • <a href="index.html">Home</a> • <a href="privacy_policy.html">Privacy Policy</a> • <a href="terms.html">Terms of Service</a>
         </div>
-    </footer>
+    </div>
 </body>
 </html>
